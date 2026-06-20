@@ -1,6 +1,6 @@
 # TiDAL-Net: Time-Drift-Aware Liquid Spatio-Temporal Graph Network
 
-This repository provides a clean public PyTorch implementation of **TiDAL-Net**, a time-drift-aware liquid spatio-temporal graph network for irregular satellite constellation telemetry data reconstruction.
+This repository provides a clean public PyTorch implementation of **TiDAL-Net**.
 
 The code is organized for GitHub release and follows the structure used in the companion public repositories: the proposed method is fully implemented, while third-party comparison methods are provided as independent adapter files because their official implementations belong to their original authors.
 
@@ -174,16 +174,7 @@ outputs/<run>/
 
 ## Citation
 
-If this repository helps your research, please cite the corresponding TiDAL-Net paper after publication. A BibTeX entry can be added here once the final bibliographic information is available.
-
-```bibtex
-@article{tidalnet2026,
-  title   = {A Time-Drift-Aware Liquid Spatio-Temporal Graph Network for Satellite Constellation Irregular Telemetry Data Reconstruction},
-  author  = {To be updated},
-  journal = {To be updated},
-  year    = {2026}
-}
-```
+This paper is currently under review. The citation metadata for the final publication will be updated after acceptance.
 
 ## License
 
