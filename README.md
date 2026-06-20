@@ -1,6 +1,6 @@
 # TiDAL-Net: Time-Drift-Aware Liquid Spatio-Temporal Graph Network
 
-This repository provides a clean public PyTorch implementation of **TiDAL-Net**.
+This repository provides a clean public PyTorch implementation of **TiDAL-Net**. The paper is currently under review; more detailed information will be released upon acceptance.
 
 The code is organized for GitHub release and follows the structure used in the companion public repositories: the proposed method is fully implemented, while third-party comparison methods are provided as independent adapter files because their official implementations belong to their original authors.
 
