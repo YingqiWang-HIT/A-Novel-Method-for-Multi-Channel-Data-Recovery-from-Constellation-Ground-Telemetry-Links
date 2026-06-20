@@ -1,0 +1,23 @@
+"""Adapter skeleton for MAG.
+
+This file intentionally does not contain the official MAG source code. The method is a
+third-party baseline and may be subject to the original authors' license, copyright,
+or redistribution restrictions. To reproduce the comparison, please read the original
+paper and official repository, install the authorized implementation locally, and then
+map its train/test API inside this adapter.
+"""
+from __future__ import annotations
+
+try:
+    from .base import ExternalBaselineAdapter
+except ImportError:  # support direct execution for quick inspection
+    from base import ExternalBaselineAdapter
+
+
+class MagAdapter(ExternalBaselineAdapter):
+    baseline_name = "MAG"
+    citation_hint = "static spatio-temporal baseline. Please cite and follow the original authors' license."
+
+
+def build_model(*args, **kwargs):
+    return MagAdapter(*args, **kwargs)

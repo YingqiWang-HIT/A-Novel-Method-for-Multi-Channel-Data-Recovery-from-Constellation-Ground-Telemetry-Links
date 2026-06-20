@@ -1,0 +1,58 @@
+# TiDAL-Net default configuration.
+# Input data format: first column is time/index, remaining columns are telemetry channels.
+excel_path: ""
+sheet_name: 0
+time_col: null
+first_col_is_time: true
+output_dir: "outputs/tidal_run"
+seed: 42
+
+seq_len: 96
+pred_len: 12
+train_ratio: 0.60
+val_ratio: 0.20
+
+# Timestamp anomaly simulation: missing points, drifted timestamps, and noisy links.
+anomaly_rate: 0.05
+missing_fraction: 0.60
+drift_fraction: 0.40
+drift_max_lag: 4
+block_count: 12
+block_min_len: 4
+block_max_len: 24
+add_noise_std: 0.01
+
+top_k_graph: 6
+graph_threshold: 0.05
+k_max: 6
+
+hidden_dim: 64
+node_input_dim: 3
+dropout: 0.10
+ode_steps: 4
+tau_min: 0.10
+lambda_abs: 0.20
+missing_loss_weight: 0.30
+smooth_loss_weight: 0.03
+
+use_gpu: true
+batch_size: 32
+epochs: 500
+lr: 0.0005
+weight_decay: 0.0001
+patience: 50
+min_delta: 0.000001
+grad_clip: 1.0
+num_workers: 0
+amp: true
+
+# Suggested ablation names:
+# TiDAL-w/o-NODE, TiDAL-w/o-BiNODE, TiDAL-w/o-GRU, TiDAL-w/o-Li-GRU,
+# TiDAL-w/o-GAT, TiDAL-w/o-Li-GAT, TiDAL-Full
+models:
+  - TiDAL-Full
+
+save_predictions: true
+save_model: true
+plot_channels: 4
+plot_len: 500
